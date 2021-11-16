@@ -5,26 +5,43 @@
 {% endblock %}
 
 {% block contenido %}
+<div align="center">
 <h2>Equipos NBA</h2>
+</div>
  
   <!--<p>Ciudad: <strong> {{i.city}}  {{i.fullName}}  {{i.tricode}} </strong></p>-->
-   <table style="width:100%; border-spacing:0;">
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-      <th>Equipo</th>
-      <th>Ciudad</th>
+      <th scope="col">Equipo</th>
+      <th scope="col">Abreviatura</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Conferencia</th>
+      <th scope="col">Division</th>
     </tr>
-
-  	{% for i in teams %}
+  </thead>
+  <tbody>
+    {% for i in teams %}
     	<tr>
         <td> 
           <a href="">{{ i.fullName}}</a>
         </td>
         <td>
+        {{ i.tricode }}
+        </td>
+        <td>
         {{ i.city }}
+        </td>
+        <td>
+        {{ i.confName }}
+        </td>
+        <td>
+        {{ i.divName }}
         </td>
       </tr>
   	{% endfor %}
-  </table>
+</table>
+
   <div align="center">
     <br>
       <strong><h1>Texto de prueba</h1></strong><br>
