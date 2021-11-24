@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'gestorligas.wsgi.application'
 DATABASES = {
     'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'gestorLigasDB',
-            'USER': 'sergioco',
-            'PASSWORD': 'pass',
-            'HOST': 'localhost',
+            'NAME': 'gestorligasdb',
+            'USER': 'admin',
+            'PASSWORD': 'holaquetalestas',
+            'HOST': 'gestiondeportes1.ccq1zav6kdwx.eu-west-3.rds.amazonaws.com',
             'PORT': '3306',
         }
 }
