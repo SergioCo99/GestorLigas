@@ -13,7 +13,7 @@
           <ul>
             {% for l in lista_ligas %}
             <li>
-              <a href="">{{ l.nombre}}</a>
+              <a href="{% url 'listaEquiposLiga' l.nombre_liga %}">{{ l.nombre_liga}}</a>
             </li>
             {% endfor %}
           </ul>
