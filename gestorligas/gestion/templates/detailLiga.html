@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+  <title>Liga detalle</title>
+{% endblock %}
+
+
+{% block contenido %}
+
+      
+
+{% if lista_equipos_liga %}
+  
+
+  {% for e in lista_equipos_liga %}
+  <h4>{{ e.nombre_equipo }}</h4>
+
+    
+  {% endfor %}  
+{% else %}
+<p>No hay categorias creadas.</p>
+{% endif %}
+{% endblock %}

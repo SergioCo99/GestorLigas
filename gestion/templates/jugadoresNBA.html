@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+  <title>Estadisticas API</title>
+{% endblock %}
+
+{% block contenido %}
+<div align="center">
+<h2>Equipos NBA</h2>
+</div>
+ 
+  <!--<p>Ciudad: <strong> {{i.city}}  {{i.fullName}}  {{i.tricode}} </strong></p>-->
+<table class="table" width="30px">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Dorsal</th>
+      <th scope="col">Posicion</th>
+      <th scope="col">Altura</th>
+      <th scope="col">Peso</th>
+      <th scope="col">Fecha Nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in players %}
+    	<tr>
+        <td> 
+        {{ i.firstName}}</a>
+        </td>
+        <td>
+        {{ i.lastName }}
+        </td>
+        <td>
+        {{ i.jersey }}
+        </td>
+        <td>
+        {{ i.pos }}
+        </td>
+        <td>
+        {{ i.heightMeters }}
+        </td>
+        <td>
+        {{ i.weightKilograms }}
+        </td>
+        <td>
+        {{ i.dateOfBirthUTC }}
+        </td>
+      </tr>
+  	{% endfor %}
+</table>
+
+  <div align="center">
+    <br>
+      <strong><h1>Texto de prueba</h1></strong><br>
+  </div>
+{% endblock %}

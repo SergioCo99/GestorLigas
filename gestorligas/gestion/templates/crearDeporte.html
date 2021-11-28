@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block titulo %}
+  <title>Nuevo Deporte</title>
+{% endblock %}
+
+{% block contenido %}
+
+	{% if form.errors %}
+		<div class="alert alert-danger" role="alert">
+  				This is a danger alert—check it out!
+		</div>
+	{% endif %}
+
+	<h1>Creacion de nuevo deporte<h1>
+	<form method='POST'>
+		{% csrf_token %} <!--Variable de seguridad-->
+		{% if mensaje %}
+			<div class="alert alert-success" role="alert">
+  				Deporte creado correctamente
+			</div>
+		{% endif %}
+
+		{{ form.nombre_deporte }}
+        {{ form.descripcion }} 
+		<button type="submit" class="btn btn-primary">Guardar</button>
+	</form>
+
+{% endblock %}
