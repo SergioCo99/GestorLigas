@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gestion',
+    'usuarios',
+    'comentarios',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +78,8 @@ WSGI_APPLICATION = 'gestorligas.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+DATABASE_ROUTERS = ['routers.db_routers.ComentariosRouter',]
+
 DATABASES = {
     'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -82,7 +88,13 @@ DATABASES = {
             'PASSWORD': 'holaquetalestas',
             'HOST': 'gestiondeportes1.ccq1zav6kdwx.eu-west-3.rds.amazonaws.com',
             'PORT': '3306',
-        }
+        },
+
+    'usuarios': {
+        'NAME': 'usuariodb',
+        'ENGINE': 'djongo',
+               
+    }
 }
 
 
