@@ -12,7 +12,7 @@ class Liga(models.Model):
 	nombre_liga = models.CharField(max_length=50, null=False, primary_key=True)
 	descripcion = models.CharField(max_length=1000)
 	deporte = models.ForeignKey(Deporte, on_delete=models.CASCADE)
-	imagen_liga = models.ImageField(default= 'default.png', blank = True)
+	imagen_liga = models.ImageField(upload_to = "gestion/static/image/liga/", default= 'default.png', blank = True)
 	fecha_creacion = models.DateField(auto_now_add=True)
 	#Usuario creador
 
