@@ -6,14 +6,22 @@
 
 {% block contenido %}
 <div>
+  
   <div class="album py-5 bg-light">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         {% for l in lista_ligas %}
-        <div class="col">
+
+        <div class="col-3">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ l.imagen_liga}}</text></svg>
+            <div class="container">
+              <img src="{{l.imagen_liga.url}}" width="100%" height="200">
+
+            </div>
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
+              
+            </svg> -->
             <div class="card-body">
               <p class="card-text">{{ l.nombre_liga}}</p>
               <div class="d-flex justify-content-between align-items-center">
@@ -36,7 +44,8 @@
 
 
 
-      <div class="bg-light p-5 rounded">
+
+      <!-- <div class="bg-light p-5 rounded">
         <div class="col-sm-8 mx-auto">
           <h1>Todas las ligas</h1>
           {% if lista_ligas %}
@@ -53,12 +62,13 @@
             <a class="btn btn-primary" href="/docs/5.1/components/navbar/" role="button">Boton prueba &raquo;</a>
           </p>
         </div>
-      </div>
+      </div> -->
       <table class="table table-sm">
         <thead>
           <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Deporte</th>
+            <th scope="col">Imagenes</th>
             <th scope="col">Nº Equipo</th>
             <th scope="col">Fecha creacion</th>
             <th scope="col">Acceder</th>
@@ -69,6 +79,7 @@
           <tr>
             <td>{{ l.nombre_liga }}</td>
             <td>{{ l.deporte }}</td>
+            <td><img src="{{l.imagen_liga.url}}" width="100px"></td>
             <td></td>
             <td>{{ l.fecha_creacion }}</td>
             <td>            

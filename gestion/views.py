@@ -53,7 +53,7 @@ def addDeporte(request):
 def addLiga(request):
 	form = FormularioLiga()
 	if request.method == 'POST': 
-		form = FormularioLiga(request.POST)
+		form = FormularioLiga(request.POST, request.FILES or None)
 		if form.is_valid():
 			form.save()
 			return redirect('index')

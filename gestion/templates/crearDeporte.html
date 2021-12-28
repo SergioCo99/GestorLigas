@@ -12,7 +12,7 @@
 	{% endif %}
 
 	<h1>Creacion de nuevo deporte<h1>
-	<form method='POST'>
+	<form method='POST' enctype="multipart/form-data">
 		{% csrf_token %} <!--Variable de seguridad-->
 		{% if mensaje %}
 			<div class="alert alert-success" role="alert">

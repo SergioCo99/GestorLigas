@@ -71,12 +71,22 @@ tr:nth-child(even) {
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
+          {%if user.is_authenticated%}
+          <span class="d-flex text-white" style="padding-right:25px;">
+            Hola, {{user.username}}
+          </span>
+          <a href="{% url 'Logout' %}"  class="d-flex text-white">
+            Logout
+          </a>
+          {%else%}
             <li class="nav-item">
           		<button type="button" class="btn btn-success">Iniciar Sesion</button>
             </li>
             <li class="nav-item">
           		<button type="button" class="btn btn-warning">Crear Cuenta</button>
             </li>
+            {%endif%}
+            
         </ul>
     </div>
 </nav>
