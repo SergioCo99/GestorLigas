@@ -10,8 +10,10 @@
   				This is a danger alert—check it out!
 		</div>
 	{% endif %}
-
-	<h1>Creacion de nuevo deporte<h1>
+	<div align="center">
+	<h2>Creacion de nuevo deporte</h2>
+	</div>
+	{% if request.user.is_authenticated %}
 	<form method='POST' enctype="multipart/form-data">
 		{% csrf_token %} <!--Variable de seguridad-->
 		{% if mensaje %}
@@ -19,10 +21,15 @@
   				Deporte creado correctamente
 			</div>
 		{% endif %}
-
+		<h3>Nombre del deporte</h3>
 		{{ form.nombre_deporte }}
-        {{ form.descripcion }} 
+		<br>
+		<h3>Descripcion del deporte</h3>
+        {{ form.descripcion }}
+		<br>
 		<button type="submit" class="btn btn-primary">Guardar</button>
 	</form>
-
+	{% else %}
+	<a class="btn btn-primary btn-block">Debes estar registrado para crear contenido</a>
+	{% endif %}
 {% endblock %}

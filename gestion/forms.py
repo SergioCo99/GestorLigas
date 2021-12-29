@@ -23,7 +23,7 @@ class FormularioDeporte(forms.ModelForm):
 class FormularioLiga(forms.ModelForm):
 	nombre_liga = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ejemplo: NBA'}))
 	descripcion = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ejemplo: Liga de baloncesto de Norteamerica'}))
-	imagen_liga = forms.ImageField()
+	imagen_liga = forms.ImageField(max_length=100)
 
 	class Meta: #Declaramos todos los datos asociados al formulario
 	
