@@ -7,7 +7,31 @@
 
 {% block contenido %}
 
+{% for j in ligainfo %}
+    <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Año creacion</th>
+            <th scope="col">Nº Equipos</th>
+            <th scope="col">Maximo Ganador</th>
+            <th scope="col">Ultimo Ganador</th>
 
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{j.nameliga}}</td>
+            <td>{{j.anyocreacion}}</td>
+            <td>{{j.numequipos}}</td>
+            <td>{{j.maxganador}}</td>
+            <td>{{j.ultimoganador}}</td>
+            
+
+          </tr>
+        </tbody>
+      </table> 
+  {% endfor %}
 
 {% if lista_equipos_liga %}
 <div>
@@ -48,10 +72,7 @@
   {% else %}
   <p>No hay categorias creadas.</p>
   {% endif %}
-  {% for c in comentario %}
-  {{c.usuario}}
-  {{c.comentario}}
-  {% endfor %}
+  
 
 
   {% endblock %}

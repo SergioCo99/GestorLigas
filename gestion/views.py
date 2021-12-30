@@ -1,6 +1,7 @@
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from comentarios.models import Comentario
+from ligainfo.models import LigaInfo
 from .models import Deporte, Liga, Equipo
 from .forms import *
 import requests
@@ -19,7 +20,8 @@ def listaEquiposLiga(request, nombre_liga):
 	equipo = Equipo.objects.order_by('nombre_equipo').filter(liga = nombre_liga)
 	liga = get_object_or_404(Liga, pk = nombre_liga)
 	comentario = Comentario.objects.filter(liga = nombre_liga)
-	context = {'liga' : liga, 'lista_equipos_liga': equipo, 'comentario' : comentario}
+	ligainfo = LigaInfo.objects.filter(nameliga = nombre_liga)
+	context = {'liga' : liga, 'lista_equipos_liga': equipo, 'comentario' : comentario, 'ligainfo' : ligainfo}
 	return render(request, 'detailLiga.html', context)
 
 #Lista de equipos NBA por API
