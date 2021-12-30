@@ -1,51 +1,57 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-  <title>Liga detalle</title>
+<title>Liga detalle</title>
 {% endblock %}
 
 
 {% block contenido %}
 
-      
+
 
 {% if lista_equipos_liga %}
- <div> 
-<div class="album py-5 bg-light">
-  <div class="container">
+<div>
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-  {% for e in lista_equipos_liga %}
-  <div class="col-3">
-    <div class="card shadow-sm">
-      <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for e in lista_equipos_liga %}
+        <div class="col-3">
+          <div class="card shadow-sm">
+            <div class="container">
 
-        <img src="{{e.imagen.url}}" width="100%" height="200">
-        <!-- </a> -->
-      </div>
-      <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
+              <img src="{{e.imagen.url}}" width="100%" height="200">
+              <!-- </a> -->
+            </div>
+            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
         
       </svg> -->
-      <div class="card-body">
-        <p class="card-text" >{{ e.nombre_equipo}}</p>
-        <!-- </a> -->
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <div class="card-body">
+              <p class="card-text">{{ e.nombre_equipo}}</p>
+              <!-- </a> -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted"> Fecha Creación: {{ e.fecha_creacion }}</small>
+              </div>
+            </div>
           </div>
-          <small class="text-muted"> Fecha Creación: {{ e.fecha_creacion }}</small>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
-  {% endfor %}
-</div>
-</div>
-</div>
 
-    
-{% else %}
-<p>No hay categorias creadas.</p>
-{% endif %}
-{% endblock %}
+
+  {% else %}
+  <p>No hay categorias creadas.</p>
+  {% endif %}
+  {% for c in comentario %}
+  {{c.usuario}}
+  {{c.comentario}}
+  {% endfor %}
+
+
+  {% endblock %}
