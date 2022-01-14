@@ -57,7 +57,7 @@
     <canvas id="grafico" style="display:none;width:100%;max-width:700px;margin-right:auto;margin-left:auto;display:block;"></canvas>
 
     <script>
-    var x = ["LeBron James", " Giannis Antetokounmpo", "Stephen Curry", "Luka Doncic", " Nikola Jokic", "Jaylen Brown", "Paul George", "Rudy Gobert", "Damian Lillard", "Domantas Sabonis", "Chris Paul", "Ben Simmons"];
+    var x = ["LeBron James", "Giannis Antetokounmpo", "Stephen Curry", "Luka Doncic", "Nikola Jokic", "Jaylen Brown", "Paul George", "Rudy Gobert", "Damian Lillard", "Domantas Sabonis", "Chris Paul", "Ben Simmons"];
     var y = [850, 825, 784, 721, 714, 685, 655, 642, 544, 425, 414, 358];
     var colores = ["red", "green","blue","orange","brown","red", "green","blue","orange","brown","red", "green"];
 
@@ -119,6 +119,41 @@
             </tr>
       </table>
       <br>
+      <br>
+    <p id="pGrafico2" style="display:none">
+    <!-- <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button> -->
+    <canvas id="grafico2" style="display:none;width:100%;max-width:700px;margin-right:auto;margin-left:auto;display:block;"></canvas>
+
+    <script>
+    var x = ["Bradley Beal", "Kyrie Irving", "Kawhi Leonard", "Jayson Tatum", "Zion Williamson", "Mike Conley", "James Harden", "Zach LaVine", "Donovan Mitchell", "Julius Randle", "Nikola Vucevic"];
+    var y = [830, 825, 784, 721, 714, 685, 655, 642, 544, 425, 414];
+    var colores = ["red", "green","blue","orange","brown","red", "green","blue","orange","brown","red"];
+
+    new Chart("grafico2", {
+    type: "bar",
+    data: {
+        labels: x,
+        datasets: [{
+        backgroundColor: colores,
+        data: y
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+        display: true,
+        text: "Votación para el 5 inicial (Valores en miles)"
+        }
+    }
+    });
+    </script>
+    </p>
+    <br>
+    <button type="button" style="margin-right:auto;margin-left:auto;display:block;" class="btn btn-primary" onclick="document.getElementById('pGrafico2').style.display='block'">Ver votaciones</button>
+    <br>
     </div>
+    <br>
+    <br>
+    <br>
     <br>
 {% endblock %}
