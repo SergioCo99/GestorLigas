@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block titulo %}
+    <title>All Star</title>
+    <script>
+        function bigImg(x) {
+          x.style.height = "180px";
+          x.style.width = "255px";
+        }
+        
+        function normalImg(x) {
+          x.style.height = "160px";
+          x.style.width = "235px";
+        }
+        </script>
+{% endblock %}
+{% block contenido %}
+<body>
+    <div align="center">
+        <h2>All Star</h2>
+    </div>
+    <table class="table" width="30px">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">LeBron James</th>
+            <th scope="col">Giannis Antetokounmpo</th>
+            <th scope="col">Stephen Curry</th>
+            <th scope="col">Luka Doncic</th>
+            <th scope="col">Nikola Jokic</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+              <td> 
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/lebron.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/anteto.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/curry.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/luka.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/joker.png" width="235px" height="160px">
+              </td>
+            </tr>
+      </table>
+{% endblock %}

@@ -63,3 +63,7 @@ def addLiga(request):
 			return redirect('index')
 	context = {"form": form}
 	return render(request, "crearLiga.html", context)
+
+def allstar(request):
+	
+	return render(request, "allstar.html")
