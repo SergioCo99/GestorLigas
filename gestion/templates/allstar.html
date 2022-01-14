@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block titulo %}
     <title>All Star</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        function bigImg(x) {
+        function imagenGrande(x) {
           x.style.height = "180px";
           x.style.width = "255px";
         }
         
-        function normalImg(x) {
+        function imagenNormal(x) {
           x.style.height = "160px";
           x.style.width = "235px";
         }
@@ -18,6 +19,8 @@
     <div align="center">
         <h2>All Star</h2>
     </div>
+    <div>
+    <h2>Equipo LeBron James</h2>
     <table class="table" width="30px">
         <thead class="thead-light">
           <tr>
@@ -31,20 +34,85 @@
         <tbody>
               <tr>
               <td> 
-                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/lebron.png" width="235px" height="160px">
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/lebron.png" width="235px" height="160px">
               </td>
               <td>
-                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/anteto.png" width="235px" height="160px">
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/anteto.png" width="235px" height="160px">
               </td>
               <td>
-                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/curry.png" width="235px" height="160px">
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/curry.png" width="235px" height="160px">
               </td>
               <td>
-                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/luka.png" width="235px" height="160px">
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/luka.png" width="235px" height="160px">
               </td>
               <td>
-                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="/static/img/joker.png" width="235px" height="160px">
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/joker.png" width="235px" height="160px">
+              </td>
+            </tr>
+    </table>
+    <br>
+    <canvas id="myChart" style="width:100%;max-width:600px;margin-right:auto;margin-left:auto;display:block;"></canvas>
+
+    <script>
+    var xValues = ["James", "Anteto", "Curry", "Doncic", "Jokic"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = ["red", "green","blue","orange","brown"];
+
+    new Chart("myChart", {
+    type: "bar",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {
+        display: true,
+        text: "Votación 5 inicial"
+        }
+    }
+    });
+    </script>
+    <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+    <h2>Equipo Kevin Durant</h2>
+    <table class="table" width="30px">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Bradley Beal</th>
+            <th scope="col">Kyrie Irving</th>
+            <th scope="col">Kawhi Leonard</th>
+            <th scope="col">Jayson Tatum</th>
+            <th scope="col">Zion Williamson</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr>
+              <td> 
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/beal.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/irving.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/kawhi.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/tatum.png" width="235px" height="160px">
+              </td>
+              <td>
+                <img onmouseover="imagenGrande(this)" onmouseout="imagenNormal(this)" src="/static/img/zion.png" width="235px" height="160px">
               </td>
             </tr>
       </table>
+      <br>
+    </div>
+    <br>
 {% endblock %}
