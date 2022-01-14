@@ -84,6 +84,15 @@ DATABASE_ROUTERS = ['routers.db_routers.ComentariosRouter', 'routers.db_routers.
 
 
 DATABASES = {
+    # 'default': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'gestorligasdb',
+    #         'USER': 'admin',
+    #         'PASSWORD': 'holaquetalestas',
+    #         'HOST': 'gestiondeportes1.ccq1zav6kdwx.eu-west-3.rds.amazonaws.com',
+    #         'PORT': '3306',
+    #     },
+    
     'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'gestorligasdb',
@@ -123,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 
