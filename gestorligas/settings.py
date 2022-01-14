@@ -96,9 +96,9 @@ DATABASES = {
     'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'gestorligasdb',
-            'USER': 'admin',
-            'PASSWORD': 'holaquetalestas',
-            'HOST': 'gestiondeportes1.ccq1zav6kdwx.eu-west-3.rds.amazonaws.com',
+            'USER': 'root',
+            'PASSWORD': 'admin',
+            'HOST': '127.0.0.1',
             'PORT': '3306',
         },
 

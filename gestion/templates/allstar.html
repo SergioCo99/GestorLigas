@@ -52,6 +52,11 @@
     </table>
     <br>
     <br>
+    <div align=center>
+        <button type="button"  class="btn btn-primary" onclick="mostrar()">Ver votaciones</button>
+        <button type="button"  class="btn btn-primary" onclick="ocultar()">Ocultar votaciones</button>
+    </div>
+    <br>
     <p id="pGrafico" style="display:none">
     <!-- <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button> -->
     <canvas id="grafico" style="display:none;width:100%;max-width:700px;margin-right:auto;margin-left:auto;display:block;"></canvas>
@@ -81,11 +86,42 @@
     </script>
     </p>
     <br>
-    <button type="button" style="margin-right:auto;margin-left:auto;display:block;" class="btn btn-primary" onclick="document.getElementById('pGrafico').style.display='block'">Ver votaciones</button>
+    <!-- <script>
+        function mostrar() {
+            if (document.getElementById('pGrafico').style.display='none'){
+                document.getElementById('pGrafico').style.display='block';
+            }
+        }
+    </script>
+    <script>
+        function ocultar() {
+            if (document.getElementById('pGrafico').style.display='block'){
+                document.getElementById('pGrafico').style.display='none';
+            }
+           
+        }
+    </script> -->
+    <script>
+        function mostrarOcultar() {
+            if (document.getElementById('pGrafico').style.display='none'){
+                console.log("Muestra");
+                document.getElementById('pGrafico').style.display='block';        
+            }
+            if (document.getElementById('pGrafico').style.display='block'){
+                console.log("Oculta");
+
+                document.getElementById('pGrafico').style.display='none';
+            }
+        }
+    </script>
+    <button type="button"  class="btn btn-primary" onclick="mostrarOcultar()">votaciones</button>
+
+    <!-- <div align=center>
+        <button type="button"  class="btn btn-primary" onclick="mostrar()">Ver votaciones</button>
+        <button type="button"  class="btn btn-primary" onclick="ocultar()">Ocultar votaciones</button>
+    </div> -->
     <br>
     </div>
-    <br>
-    <br>
     <br>
     <div>
     <h2>Equipo Kevin Durant</h2>
