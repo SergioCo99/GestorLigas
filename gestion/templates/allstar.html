@@ -86,7 +86,7 @@
     </script>
     </p>
     <br>
-    <!-- <script>
+    <script>
         function mostrar() {
             if (document.getElementById('pGrafico').style.display='none'){
                 document.getElementById('pGrafico').style.display='block';
@@ -97,29 +97,9 @@
         function ocultar() {
             if (document.getElementById('pGrafico').style.display='block'){
                 document.getElementById('pGrafico').style.display='none';
-            }
-           
-        }
-    </script> -->
-    <script>
-        function mostrarOcultar() {
-            if (document.getElementById('pGrafico').style.display='none'){
-                console.log("Muestra");
-                document.getElementById('pGrafico').style.display='block';        
-            }
-            if (document.getElementById('pGrafico').style.display='block'){
-                console.log("Oculta");
-
-                document.getElementById('pGrafico').style.display='none';
-            }
+            }  
         }
     </script>
-    <button type="button"  class="btn btn-primary" onclick="mostrarOcultar()">votaciones</button>
-
-    <!-- <div align=center>
-        <button type="button"  class="btn btn-primary" onclick="mostrar()">Ver votaciones</button>
-        <button type="button"  class="btn btn-primary" onclick="ocultar()">Ocultar votaciones</button>
-    </div> -->
     <br>
     </div>
     <br>
@@ -156,6 +136,11 @@
       </table>
       <br>
       <br>
+    <div align=center>
+        <button type="button"  class="btn btn-primary" onclick="mostrarB()">Ver votaciones</button>
+        <button type="button"  class="btn btn-primary" onclick="ocultarB()">Ocultar votaciones</button>
+    </div>
+    <br>
     <p id="pGrafico2" style="display:none">
     <!-- <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button> -->
     <canvas id="grafico2" style="display:none;width:100%;max-width:700px;margin-right:auto;margin-left:auto;display:block;"></canvas>
@@ -184,8 +169,21 @@
     });
     </script>
     </p>
+    <script>
+        function mostrarB() {
+            if (document.getElementById('pGrafico2').style.display='none'){
+                document.getElementById('pGrafico2').style.display='block';
+            }
+        }
+    </script>
+    <script>
+        function ocultarB() {
+            if (document.getElementById('pGrafico2').style.display='block'){
+                document.getElementById('pGrafico2').style.display='none';
+            }  
+        }
+    </script>
     <br>
-    <button type="button" style="margin-right:auto;margin-left:auto;display:block;" class="btn btn-primary" onclick="document.getElementById('pGrafico2').style.display='block'">Ver votaciones</button>
     <br>
     </div>
     <br>

@@ -22,4 +22,5 @@ urlpatterns = [
 path('admin/', admin.site.urls),
 path('', include('gestion.urls')),
 path('usuarios/', include('usuarios.urls')),
+path('apirest/', include('apirest.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
