@@ -51,31 +51,37 @@
             </tr>
     </table>
     <br>
-    <canvas id="myChart" style="width:100%;max-width:600px;margin-right:auto;margin-left:auto;display:block;"></canvas>
+    <br>
+    <p id="pGrafico" style="display:none">
+    <!-- <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button> -->
+    <canvas id="grafico" style="display:none;width:100%;max-width:700px;margin-right:auto;margin-left:auto;display:block;"></canvas>
 
     <script>
-    var xValues = ["James", "Anteto", "Curry", "Doncic", "Jokic"];
-    var yValues = [55, 49, 44, 24, 15];
-    var barColors = ["red", "green","blue","orange","brown"];
+    var x = ["LeBron James", " Giannis Antetokounmpo", "Stephen Curry", "Luka Doncic", " Nikola Jokic", "Jaylen Brown", "Paul George", "Rudy Gobert", "Damian Lillard", "Domantas Sabonis", "Chris Paul", "Ben Simmons"];
+    var y = [850, 825, 784, 721, 714, 685, 655, 642, 544, 425, 414, 358];
+    var colores = ["red", "green","blue","orange","brown","red", "green","blue","orange","brown","red", "green"];
 
-    new Chart("myChart", {
+    new Chart("grafico", {
     type: "bar",
     data: {
-        labels: xValues,
+        labels: x,
         datasets: [{
-        backgroundColor: barColors,
-        data: yValues
+        backgroundColor: colores,
+        data: y
         }]
     },
     options: {
         legend: {display: false},
         title: {
         display: true,
-        text: "Votación 5 inicial"
+        text: "Votación para el 5 inicial (Valores en miles)"
         }
     }
     });
     </script>
+    </p>
+    <br>
+    <button type="button" style="margin-right:auto;margin-left:auto;display:block;" class="btn btn-primary" onclick="document.getElementById('pGrafico').style.display='block'">Ver votaciones</button>
     <br>
     </div>
     <br>
