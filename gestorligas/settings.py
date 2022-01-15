@@ -16,7 +16,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
+# PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'gestion/static/js', 'serviceworker.js')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -26,6 +26,11 @@ SECRET_KEY = '-p!v$69iku3wj*%%z@-&1+#&#8f%4nv6_31h-80q+cm1de6u)('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+SEGURE_BROWSER_XSS_FILTER = True
+SEGURE_CONTENT_TYPE_NOSNIFF = False
+SEGURE_SSL_REDIRECT = False
+SESSION_COOKIE_SEGURE = False
+CSRF_COOKIE_SEGURE = True
 
 ALLOWED_HOSTS = []
 
