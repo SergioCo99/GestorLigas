@@ -9,9 +9,6 @@ from gestion.models import *
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def EquipoDetail(request):
-	
-   
     equipo_request = Equipo.objects.all()
     serializer = EquipoSerializer(equipo_request, many=True)
-
     return Response(serializer.data)

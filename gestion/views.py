@@ -5,9 +5,6 @@ from .models import Deporte, Liga, Equipo
 from .forms import *
 import requests
 
-#def index(request):
-#	return render(request, 'index.html')
-
 # Lista de Ligas creadas
 def index(request):
 	ligas = get_list_or_404(Liga.objects.order_by('nombre_liga'))
@@ -63,5 +60,4 @@ def addLiga(request):
 	return render(request, "crearLiga.html", context)
 
 def allstar(request):
-	
 	return render(request, "allstar.html")
