@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Signin Template · Bootstrap v5.1</title>
+    <title>Registrarse</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
@@ -49,10 +49,9 @@
     <main class="form-signin">
         <form method="post">
             {%csrf_token%}
-            <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 fw-normal">Registro de usuarios</h1>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <label for="exampleFormControlInput1" class="form-label">Nombre usuario</label>
                 {{form.username}}
             </div>
             <div class="mb-3">
@@ -60,35 +59,24 @@
                 {{form.email}}
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">first_name</label>
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
                 {{form.first_name}}
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">last_name</label>
+                <label for="exampleFormControlInput1" class="form-label">Apellido</label>
                 {{form.last_name}}
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">password1</label>
+                <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
                 {{form.password1}}
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">password2</label>
+                <label for="exampleFormControlInput1" class="form-label">Repita contraseña</label>
                 {{form.password2}}
             </div>
             {{form.errors}}
-            <!-- <div class="form-floating">
-                <input type="password" class="form-control" id="contra" name="contra" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-            </div> -->
-
-           
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
         </form>
     </main>
-
-
-
 </body>
-
 </html>
