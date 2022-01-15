@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'gestion',
     'usuarios',
     'ligainfo',    
-    'comentarios',
     'apirest',
     'rest_framework',
     'rest_framework.authtoken',
@@ -84,7 +83,7 @@ WSGI_APPLICATION = 'gestorligas.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASE_ROUTERS = ['routers.db_routers.ComentariosRouter', 'routers.db_routers.LigaInfoRouter']
+DATABASE_ROUTERS = ['routers.db_routers.LigaInfoRouter']
 
 
 DATABASES = {
