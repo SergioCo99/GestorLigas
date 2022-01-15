@@ -20,3 +20,7 @@ Además pueden consultar, imprimir o guardar como PDF la información sobre los 
 
 
 ## 6. Cómo acceder a la parte cliente
+Para poder visualizar y usar la aplicación web, abriremos un navegador y en la barra superior introduciremos la dirección de localhost puerto 8000, de la siguiente manera:
+```
+http://127.0.0.1:8000/
+````
