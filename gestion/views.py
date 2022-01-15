@@ -35,7 +35,7 @@ def estadisticas(request):
 def addEquipo(request):
 	form = FormularioEquipo()
 	if request.method == 'POST': 
-		form = FormularioEquipo(request.POST)
+		form = FormularioEquipo(request.POST, request.FILES or None)
 		if form.is_valid():
 			form.save()
 			return redirect('index')

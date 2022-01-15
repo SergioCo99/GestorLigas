@@ -13,7 +13,8 @@
 	<div align="center">
 	<h2>Creacion de nuevo equipo</h2>
 	</div>
-	<form method='POST'>
+	{% if request.user.is_authenticated %}
+	<form method='POST' enctype="multipart/form-data">
 		{% csrf_token %} <!--Variable de seguridad-->
 		{% if mensaje %}
 			<div class="alert alert-success" role="alert">
@@ -25,11 +26,17 @@
 		{{ form.nombre_equipo }}
 		<br>
 		<h3>Descripcion</h3>
-        {{ form.descripcion }} 
+		{{ form.descripcion }} 
 		<br>
 		<h3>Liga</h3>
 		{{ form.liga }}
 		<br>
+		<h3>Imagen</h3>
+		{{ form.imagen }}
+		<br> <br>
 		<button type="submit" class="btn btn-primary">Guardar</button>
 	</form>
+	{% else %}
+	<a class="btn btn-primary btn-block" >Debes estar registrado para crear contenido</a>
+	{% endif %}
 {% endblock %}
