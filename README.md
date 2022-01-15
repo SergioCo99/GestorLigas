@@ -24,3 +24,8 @@ Para poder visualizar y usar la aplicación web, abriremos un navegador y en la 
 ```
 http://127.0.0.1:8000/
 ````
+Para acceder a la parte administradora, cuyo nombre de usuario es "a" y contraseña "a", añadiremos /admin a la dirección anterior:
+```
+http://127.0.0.1:8000/admin/
+````
+Como es una aplicación PWA, tambíen podemos descargar la aplicación desde el navegador y poder usarla como una aparente aplicación de escritorio.
