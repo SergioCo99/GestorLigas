@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block titulo %}
-  <title>Estadisticas API</title>
+  <title>Equipos API</title>
   <script>
-    function estadisticasCorrectas() {
-      alert("Estadisticas cargadas correctamente");
+    function equiposCorrectos() {
+      alert("Equipos cargados correctamente");
     }
   </script>
   <script>
@@ -24,7 +24,7 @@
 {% endblock %}
 
 {% block contenido %}
-<body onload="estadisticasCorrectas()">
+<body onload="equiposCorrectos()">
 <div align="center">
 <h2>Equipos NBA</h2>
 </div>
@@ -65,9 +65,4 @@
       </tr>
   	{% endfor %}
 </table>
-
-  <div align="center">
-    <br>
-      <strong><h1>Texto de prueba</h1></strong><br>
-  </div>
 {% endblock %}
