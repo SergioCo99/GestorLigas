@@ -9,6 +9,13 @@ Además pueden consultar, imprimir o guardar como PDF la información sobre los 
 
 ## 2. Software que se necesita instalar
 
+* Para editar código se puede utilizar cualquier editor de texto, yo he usado Visual Studio Code.
+* Navegador web para acceder a la parte cliente, por ejemplo, Google Chrome.
+* MySQL Workbench, para la administración de la base de datos relacional.
+* MongoDBCompass, para la administración de la base de datos no relacional.
+* Postman, que nos permite realizar pruebas API.
+* Python, la versión que he utilizado ha sido la Python 3.8.5
+* Pip, para instalar y administrar paquetes.
 
 ## 3. Servicios que hay que arrancar
 
@@ -22,7 +29,7 @@ Para arrancar el proyecto y poder usarlo mediante el navegador tendremos que eje
 python manage.py runserver
 ````
 
-Cuando hacemos un cambio que afecta a la Base de Datos, por ejemplo, en el archivo Models.py que es donde se define la estructura de datos, tenemos que ejecutar los siguientes comandos:
+Cuando hacemos un cambio que afecta a la base de datos, por ejemplo, en el archivo Models.py que es donde se define la estructura de datos, tenemos que ejecutar los siguientes comandos:
 
 Primero ejecutaremos este comando que se encarga de crear nuevas migraciones en función de los cambios que haya realizado en sus modelos.
 ```
@@ -35,7 +42,7 @@ El comando anterior crea pero no aplica las migraciones tenemos que usar otro co
 python manage.py migrate
 ````
 
-Como este proyecto tiene dos bases de datos, una relacional y otra no relacional, en el comando anterior tenemos que señalar sobre que Base de Datos queremos ejecutar el comando.
+Como este proyecto tiene dos bases de datos, una relacional y otra no relacional, en el comando anterior tenemos que señalar sobre que base de datos queremos ejecutar el comando.
 
 ```
 python manage.py migrate --database=default
@@ -44,6 +51,7 @@ python manage.py migrate --database=default
 ```
 python manage.py migrate --database=ligainfobd
 ````
+
 ## 6. Cómo acceder a la parte cliente
 Para poder visualizar y usar la aplicación web, abriremos un navegador y en la barra superior introduciremos la dirección de localhost puerto 8000, de la siguiente manera:
 ```
