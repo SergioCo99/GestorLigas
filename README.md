@@ -17,8 +17,33 @@ Además pueden consultar, imprimir o guardar como PDF la información sobre los 
 
 
 ## 5. Cómo arrancar la parte servidora
+Para arrancar el proyecto y poder usarlo mediante el navegador tendremos que ejecutar el siguiente comando:
+```
+python manage.py runserver
+````
 
+Cuando hacemos un cambio que afecta a la Base de Datos, por ejemplo, en el archivo Models.py que es donde se define la estructura de datos, tenemos que ejecutar los siguientes comandos:
 
+Primero ejecutaremos este comando que se encarga de crear nuevas migraciones en función de los cambios que haya realizado en sus modelos.
+```
+python manage.py makemigrations
+````
+
+El comando anterior crea pero no aplica las migraciones tenemos que usar otro comando. Para aplicar los cambios usaremos "migrate".
+
+```
+python manage.py migrate
+````
+
+Como este proyecto tiene dos bases de datos, una relacional y otra no relacional, en el comando anterior tenemos que señalar sobre que Base de Datos queremos ejecutar el comando.
+
+```
+python manage.py migrate --database=default
+````
+
+```
+python manage.py migrate --database=ligainfobd
+````
 ## 6. Cómo acceder a la parte cliente
 Para poder visualizar y usar la aplicación web, abriremos un navegador y en la barra superior introduciremos la dirección de localhost puerto 8000, de la siguiente manera:
 ```
