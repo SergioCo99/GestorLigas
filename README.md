@@ -18,7 +18,16 @@ Además pueden consultar, imprimir o guardar como PDF la información sobre los 
 * Pip, para instalar y administrar paquetes.
 
 ## 3. Servicios que hay que arrancar
+Clonamos el proyecto en nuestra máquina mediante el siguiente comando:
+```
+git clone https://github.com/SergioCo99/GestorLigas.git
+````
+Tambien se puede descargar el proyecto como carpeta zip.
 
+Instalamos las dependencias incluidas en el archivo requirements.txt mediante este comando:
+```
+pip install -r requirements.txt
+````
 
 ## 4. Dependencias que hay que instalar
 
