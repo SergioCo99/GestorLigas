@@ -34,6 +34,9 @@ Una vez instaladas las dependencias, podemos ejecutar el proyecto.
 Las dependencias a instalar son las que se muestran en el archivo requirements.txt. A continuación se explicarán algunas de ellas.
 
 * Django==3.1.1 -> Framework de desarrollo web de código abierto, escrito en Python.
+* django-pwa==1.0.10 -> Para que el proyecto sea una aplicación web progresiva.
+* django-rest-framework==0.1.0 y djangorestframework==3.13.1 -> Para la API RESTful.
+* djongo==1.3.6 -> Para alojar aplicaciones Django en una base de datos MongoDB.
 
 ## 5. Cómo arrancar la parte servidora
 Para arrancar el proyecto y poder usarlo mediante el navegador tendremos que ejecutar el siguiente comando:
