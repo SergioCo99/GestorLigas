@@ -31,7 +31,9 @@ pip install -r requirements.txt
 Una vez instaladas las dependencias, podemos ejecutar el proyecto.
 
 ## 4. Dependencias que hay que instalar
-Las dependencias a instalar son las que se muestran en el archivo requirements.txt. A continuación se explicarán algunas de ellas.
+Las dependencias a instalar son las que se muestran en el archivo requirements.txt. 
+
+A continuación se explicarán algunas de ellas.
 
 * Django==3.1.1 -> Framework de desarrollo web de código abierto, escrito en Python.
 * django-pwa==1.0.10 -> Para que el proyecto sea una aplicación web progresiva.
