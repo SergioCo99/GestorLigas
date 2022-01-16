@@ -23,12 +23,13 @@ python manage.py runserver
 ````
 
 Cuando hacemos un cambio que afecta a la Base de Datos, por ejemplo, en el archivo Models.py que es donde se define la estructura de datos, tenemos que ejecutar los siguientes comandos:
+
 Primero ejecutaremos este comando que se encarga de crear nuevas migraciones en función de los cambios que haya realizado en sus modelos.
 ```
 python manage.py makemigrations
 ````
 
-Como el comando anterior crea pero no aplica las migraciones tenemos que usar otro comando. Para aplicar los cambios usaremos "migrate".
+El comando anterior crea pero no aplica las migraciones tenemos que usar otro comando. Para aplicar los cambios usaremos "migrate".
 
 ```
 python manage.py migrate
