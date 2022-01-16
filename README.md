@@ -28,9 +28,12 @@ Instalamos las dependencias incluidas en el archivo requirements.txt mediante es
 ```
 pip install -r requirements.txt
 ````
+Una vez instaladas las dependencias, podemos ejecutar el proyecto.
 
 ## 4. Dependencias que hay que instalar
+Las dependencias a instalar son las que se muestran en el archivo requirements.txt. A continuación se explicarán algunas de ellas.
 
+* Django==3.1.1 -> Framework de desarrollo web de código abierto, escrito en Python.
 
 ## 5. Cómo arrancar la parte servidora
 Para arrancar el proyecto y poder usarlo mediante el navegador tendremos que ejecutar el siguiente comando:
