@@ -92,23 +92,23 @@ DATABASE_ROUTERS = ['routers.db_routers.LigaInfoRouter']
 
 
 DATABASES = {
-    # 'default': {
-    #         'ENGINE': 'django.db.backends.mysql',
-    #         'NAME': 'gestorligasdb',
-    #         'USER': 'admin',
-    #         'PASSWORD': 'holaquetalestas',
-    #         'HOST': 'gestiondeportes1.ccq1zav6kdwx.eu-west-3.rds.amazonaws.com',
-    #         'PORT': '3306',
-    #     },
-    
     'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'gestorligasdb',
-            'USER': 'root',
-            'PASSWORD': 'admin',
-            'HOST': '127.0.0.1',
+            'USER': 'admin',
+            'PASSWORD': 'holaquetalestas',
+            'HOST': 'gestiondeportes1.ccq1zav6kdwx.eu-west-3.rds.amazonaws.com',
             'PORT': '3306',
         },
+    
+    # 'default': {
+    #         'ENGINE': 'django.db.backends.mysql',
+    #         'NAME': 'gestorligasdb',
+    #         'USER': 'root',
+    #         'PASSWORD': 'admin',
+    #         'HOST': '127.0.0.1',
+    #         'PORT': '3306',
+    #     },
 
     'ligainfobd': {
         'NAME': 'ligainfodb',
